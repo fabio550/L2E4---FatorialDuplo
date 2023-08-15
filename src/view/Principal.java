@@ -1,12 +1,16 @@
 package view;
 import controller.FatorialDuploController;
 
+import javax.swing.*;
+
 public class Principal {
     public static void main(String[] args) {
         FatorialDuploController fdc = new FatorialDuploController();
 
-        int res = fdc.CalcFatorialDuplo(5);
+        int num = Integer.parseInt(JOptionPane.showInputDialog("Digite um número:"));
 
-        System.out.println(res);
+        int res = fdc.CalcFatorialDuplo(num);
+
+        JOptionPane.showMessageDialog(null, "O fatorial duplo de " + num + " é " + res); // 5 -> 15
     }
 }
